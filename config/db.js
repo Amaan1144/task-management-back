@@ -5,9 +5,10 @@ dotenv.config();
 
 const db = mysql.createConnection({
     host: process.env.HOST,
-    user: process.env.USER,
+    user: process.env.DBUSER,
     password: process.env.DBPASS,
-    database: process.env.DB
+    database: process.env.DB,
+    port: process.env.port
 });
 
 db.connect((err)=> {
